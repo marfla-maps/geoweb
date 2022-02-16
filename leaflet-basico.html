@@ -25,7 +25,7 @@
             function init(){
                 map = L.map("map",{
                 center:[41.6863, 1.8382],
-                zoom:8
+                zoom:3,
                 });
                 capa1= L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
@@ -34,6 +34,7 @@
                 attribution : "OSM"
                 });
                 capa1.addTo(map);
+                
                 var punto = L.marker([41.3954, 2.16859]);
                 punto.addTo(map);
                 punto.bindPopup('Hola punto');

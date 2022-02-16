@@ -1,0 +1,49 @@
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Mapbox básico</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%
+        }
+    </style>
+    <script>
+        //Añadir vuestor token y vuestro estilo
+        function init() {
+            mapboxgl.accessToken =
+                'pk.eyJ1IjoibWFyZmxhIiwiYSI6ImNreXEwaHZ3NjBmOHoyb25wNjU4bjNrN3YifQ.d5cSvSsV3hjHa-qkNervBQ';
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/marfla/ckzpupb14003f14qzihxgfim4',
+                center: [2.837, 41.972], 
+                zoom: 16,
+                attributionControl: false
+            });
+            map.addControl(new mapboxgl.AttributionControl({compact: true}));
+            map.addControl(new mapboxgl.NavigationControl());
+
+            var marker = new mapboxgl.Marker()
+            .setLngLat([2.837, 41.972])
+            .setPopup(new mapboxgl.Popup().setHTML('<h3>Cementerio Girona</h3>'))
+            .addTo(map);
+
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <div id="map"></div>
+</body>
+
+</html>  
