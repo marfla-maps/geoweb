@@ -36,7 +36,7 @@ function terremotosGeonamesToGeoJSON(respuestaGeonames){
             'east=' + map.getBounds()._ne.lng + '&' +
             'west=' + map.getBounds()._sw.lng + '&' +
             'maxRows=50&' +
-            'minMagnitude=5&' +
+            'minMagnitude=3&' +
             'username=masterupc&';
             //date : 'yyyy-MM-d
     
