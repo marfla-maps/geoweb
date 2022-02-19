@@ -14,10 +14,12 @@ function addRutas() {
     'line-cap': 'round'
     },
     'paint': {
-    'line-color': '#ff0000',
+    'line-color': '#00ff00',
     'line-width': 3
     }
     });
+
+    }
 
     function zoomToRutas(valores) {
 
@@ -30,4 +32,4 @@ function addRutas() {
     
         } //fin funcion
     
-    } //fin funcion
+    //fin funcion
