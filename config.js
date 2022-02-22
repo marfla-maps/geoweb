@@ -58,7 +58,10 @@ var config = {
             rotateAnimation: true,
             callback: '',
             onChapterEnter: [],
-            onChapterExit: []
+            onChapterExit: [
+
+            ]
+            
         }
     ]
 };
